@@ -36,7 +36,7 @@ const david = new THREE.Group();
 
 gltfLoader.load("https://sandbox.dsply.fr/quentin/avatar_wireframe/autoportraitv2.gltf", (gltf) => {
   gltf.scene.scale.set(3.3, 3.3, 3.3);
-  gltf.scene.rotation.set(0, 1, -0.01);
+  gltf.scene.rotation.set(0, 1.5, -0.01);
   gltf.scene.position.set(0, -0.3, 0);
   david.add(gltf.scene);
   david.traverse((node) => {
@@ -136,9 +136,7 @@ const tick = () => {
 
   // David animation
   // david.rotation.y = viewMouseX * 0.3;
-  david.rotation.y = elapsedTime * 0.1 * viewMouseX;
-  david.rotation.x = elapsedTime * 0.01 * viewMouseY;
-
+  david.rotation.y = elapsedTime * 0.3;
   // david.rotation.x = viewMouseY * 0.2;
   backLight.position.z = Math.sin(elapsedTime * 4) + Math.sin(elapsedTime * 2.5);
 
