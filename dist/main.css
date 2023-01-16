@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow: hidden;
+  color: #ccc;
+  font-family: sans-serif;
+}
+
+.webgl {
+  position: fixed;
+  z-index: -10;
+  top: 0;
+  left: 0;
+  outline: none;
+}
+
+
+/*# sourceMappingURL=main.css.map*/
