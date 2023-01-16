@@ -35,7 +35,7 @@ const david = new THREE.Group();
 // });
 
 gltfLoader.load("https://sandbox.dsply.fr/quentin/avatar_wireframe/autoportraitv2.gltf", (gltf) => {
-  gltf.scene.scale.set(3.3, 3.3, 3.3);
+  gltf.scene.scale.set(2.9, 2.9, 2.9);
   gltf.scene.rotation.set(0, 1.5, -0.01);
   gltf.scene.position.set(0, -0.3, 0);
   david.add(gltf.scene);
