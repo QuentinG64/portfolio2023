@@ -42,6 +42,7 @@ gltfLoader.load("https://sandbox.dsply.fr/quentin/avatar_wireframe/autoportraitv
   david.traverse((node) => {
     if (!node.isMesh) return;
     node.material.wireframe = true;
+    node.material.transparent = true;
   });
   scene.add(david);
 });
@@ -102,7 +103,7 @@ scene.add(camera);
 const renderer = new THREE.WebGLRenderer({
   canvas: canvas,
   antialias: true,
-  alpha: true,
+  // alpha: true,
 });
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
