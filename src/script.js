@@ -38,11 +38,24 @@ gltfLoader.load("https://sandbox.dsply.fr/quentin/avatar_wireframe/autoportraitv
   gltf.scene.scale.set(2.9, 2.9, 2.9);
   gltf.scene.rotation.set(0, 1.5, -0.01);
   gltf.scene.position.set(0, -0.3, 0);
+
   david.add(gltf.scene);
   // david.traverse((node) => {
   //   if (!node.isMesh) return;
+  //   let mat = new THREE.MeshStandardMaterial();
+  //   let color = new THREE.Color(0x342);
   //   node.material.wireframe = true;
   //   node.material.transparent = true;
+  //   mat.color = color;
+  //   node.material = mat;
+  // });
+  // david.traverse((node) => {
+  //   if (node.isMesh) return;
+  //   let mat = new THREE.MeshStandardMaterial();
+  //   let color = new THREE.Color(0xffffff);
+  //   mat.color = color;
+  //   node.material = mat;
+  //   mat.wireframe = true;
   // });
   scene.add(david);
 });
@@ -109,7 +122,7 @@ renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-renderer.setClearColor(0xffffff, 1);
+renderer.setClearColor(0x040404, 1);
 
 /**
  * Animate
