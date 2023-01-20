@@ -39,11 +39,11 @@ gltfLoader.load("https://sandbox.dsply.fr/quentin/avatar_wireframe/autoportraitv
   gltf.scene.rotation.set(0, 1.5, -0.01);
   gltf.scene.position.set(0, -0.3, 0);
   david.add(gltf.scene);
-  david.traverse((node) => {
-    if (!node.isMesh) return;
-    node.material.wireframe = true;
-    node.material.transparent = true;
-  });
+  // david.traverse((node) => {
+  //   if (!node.isMesh) return;
+  //   node.material.wireframe = true;
+  //   node.material.transparent = true;
+  // });
   scene.add(david);
 });
 
@@ -52,7 +52,7 @@ gltfLoader.load("https://sandbox.dsply.fr/quentin/avatar_wireframe/autoportraitv
  */
 
 const backLight = new THREE.PointLight(0xffffff, 3, 20);
-backLight.position.set(-5, 5, -5);
+backLight.position.set(-5, 5, 2);
 scene.add(backLight);
 
 const fillLight = new THREE.PointLight(0xffffff, 0.7, 20);
@@ -109,7 +109,7 @@ renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-renderer.setClearColor(0x040404, 1);
+renderer.setClearColor(0xffffff, 1);
 
 /**
  * Animate
@@ -141,7 +141,7 @@ const tick = () => {
   // david.rotation.y = viewMouseX * 0.3;
   david.rotation.y = elapsedTime * 0.3;
   // david.rotation.x = viewMouseY * 0.2;
-  backLight.position.z = Math.sin(elapsedTime * 4) + Math.sin(elapsedTime * 2.5);
+  // backLight.position.z = Math.sin(elapsedTime * 4) + Math.sin(elapsedTime * 2.5);
 
   const lightAngle = -elapsedTime * 0.32;
 
