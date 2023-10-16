@@ -157,16 +157,16 @@ const tick = () => {
   // david.rotation.x = viewMouseY * 0.2;
   // backLight.position.z = Math.sin(elapsedTime * 4) + Math.sin(elapsedTime * 2.5);
 
-  const lightAngle = -elapsedTime * 0.32;
+  // const lightAngle = -elapsedTime * 0.32;
 
-  fillLight.position.x = Math.cos(lightAngle) * viewMouseX;
-  fillLight.position.y = Math.sin(lightAngle) * viewMouseY;
+  // fillLight.position.x = Math.cos(lightAngle) * viewMouseX;
+  // fillLight.position.y = Math.sin(lightAngle) * viewMouseY;
 
-  backLight.position.x = Math.cos(lightAngle) * 3;
-  backLight.position.y = Math.sin(lightAngle) * 1.5;
+  // backLight.position.x = Math.cos(lightAngle) * 3;
+  // backLight.position.y = Math.sin(lightAngle) * 1.5;
 
-  keyLight.position.x = Math.cos(lightAngle) * 5;
-  keyLight.position.y = Math.sin(lightAngle) * 5;
+  // keyLight.position.x = Math.cos(lightAngle) * 5;
+  // keyLight.position.y = Math.sin(lightAngle) * 5;
 
   // Update controls
   // controls.update();
