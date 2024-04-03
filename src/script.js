@@ -27,63 +27,12 @@ const gltfLoader = new GLTFLoader();
 const hand = new THREE.Group();
 const david = new THREE.Group();
 
-// gltfLoader.load("/models/hand/scene.gltf", (gltf) => {
-//   gltf.scene.scale.set(2.7, 2.7, 2.7);
-//   gltf.scene.rotation.set(0, 83.7, 0);
-//   gltf.scene.position.set(0, -0.65, 0);
-//   hand.add(gltf.scene);
-//   scene.add(hand);
-// });
-
-// gltfLoader.load("https://sandbox.dsply.fr/quentin/avatar_wireframe/autoportraitv2.gltf", (gltf) => {
-//   gltf.scene.scale.set(2.9, 2.9, 2.9);
-//   gltf.scene.rotation.set(0, 1.5, -0.01);
-//   gltf.scene.position.set(0, -0.3, 0);
-
-//   david.add(gltf.scene);
-//   // david.traverse((node) => {
-//   //   if (!node.isMesh) return;
-//   //   let mat = new THREE.MeshStandardMaterial();
-//   //   let color = new THREE.Color(0x342);
-//   //   node.material.wireframe = true;
-//   //   node.material.transparent = true;
-//   //   mat.color = color;
-//   //   node.material = mat;
-//   // });
-//   // david.traverse((node) => {
-//   //   if (node.isMesh) return;
-//   //   let mat = new THREE.MeshStandardMaterial();
-//   //   let color = new THREE.Color(0xffffff);
-//   //   mat.color = color;
-//   //   node.material = mat;
-//   //   mat.wireframe = true;
-//   // });
-//   scene.add(david);
-// });
-
 gltfLoader.load("/models/msel/autoportraitv2.gltf", (gltf) => {
   gltf.scene.scale.set(2.9, 2.9, 2.9);
   gltf.scene.rotation.set(0, 1.5, -0.01);
   gltf.scene.position.set(0, -0.3, 0);
 
   david.add(gltf.scene);
-  // david.traverse((node) => {
-  //   if (!node.isMesh) return;
-  //   let mat = new THREE.MeshStandardMaterial();
-  //   let color = new THREE.Color(0x342);
-  //   node.material.wireframe = true;
-  //   node.material.transparent = true;
-  //   mat.color = color;
-  //   node.material = mat;
-  // });
-  // david.traverse((node) => {
-  //   if (node.isMesh) return;
-  //   let mat = new THREE.MeshStandardMaterial();
-  //   let color = new THREE.Color(0xffffff);
-  //   mat.color = color;
-  //   node.material = mat;
-  //   mat.wireframe = true;
-  // });
   scene.add(david);
 });
 
